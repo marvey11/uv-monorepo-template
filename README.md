@@ -87,6 +87,15 @@ uv run --all-packages mypy .
 
 To run a command for one member, use `uv run --package <member> <command>`, for example `uv run --package runner pytest`.
 
+## Build the runner image
+
+The runner image uses a multi-stage build and includes the internal `core` dependency. Build it from the repository root so uv can resolve the complete workspace:
+
+```bash
+docker build --file apps/runner/Dockerfile --tag uv-runner:latest .
+docker run --rm uv-runner:latest
+```
+
 ## Pre-commit
 
 Install the hooks once, then run them against all files:

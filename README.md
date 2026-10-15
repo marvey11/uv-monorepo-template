@@ -13,7 +13,7 @@ Each application or library is an independent uv workspace member. The repositor
 
 ## Prerequisites
 
-- Python 3.12 or newer
+- Python 3.14 or newer
 - uv
 
 Install uv using the [official instructions](https://docs.astral.sh/uv/getting-started/installation/), then create the environment and install all workspace and development dependencies:

@@ -6,7 +6,7 @@ readme = "README.md"
 authors = [
     { name = "Marco Wegner", email = "673439+marvey11@users.noreply.github.com" },
 ]
-requires-python = ">=3.12"
+requires-python = ">=3.14"
 dependencies = []
 
 [dependency-groups]
@@ -24,7 +24,7 @@ members = ["apps/*", "libs/*"]
 # --- Tooling Configurations ---
 
 [tool.ruff]
-target-version = "py312"
+target-version = "py314"
 line-length = 88
 
 [tool.ruff.lint]

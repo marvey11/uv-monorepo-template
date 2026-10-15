@@ -39,7 +39,7 @@ repos:
       # Run test suite across workspace before push
       - id: pytest
         name: pytest
-        entry: uv run --all-packages pytest
+        entry: ./scripts/run-coverage.sh
         language: system
         pass_filenames: false
         stages: [pre-push]

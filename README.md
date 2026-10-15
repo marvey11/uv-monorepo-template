@@ -67,7 +67,7 @@ Run commands from the repository root. `--all-packages` runs the command in the 
 
 ```bash
 # Install or refresh the environment
-uv sync
+uv sync --locked --all-packages --all-extras --dev
 
 # Run the sample application
 uv run --package runner python -m runner.main
@@ -75,6 +75,9 @@ uv run --package runner python -m runner.main
 # Run all tests, or one package's tests
 uv run --all-packages pytest
 uv run pytest libs/core/tests/test_hello.py
+
+# Run all tests, including test coverage
+./scripts/run-coverage.sh
 
 # Lint and format
 uv run --all-packages ruff check .
@@ -108,6 +111,8 @@ uv run pre-commit run --all-files
 ```
 
 The pre-commit configuration checks the lockfile, Ruff formatting and linting, TOML/YAML/JSON files, and mypy. The pytest hook runs on pre-push.
+
+Executing `./scripts/bootstrap.sh` will also install the hooks.
 
 ## Adding tests
 

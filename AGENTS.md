@@ -9,7 +9,7 @@ The root project is tooling-only. Do not add application code or make the root p
 ## Development workflow
 
 * Use Python 3.14 or newer, as specified by `.python*version` and the project metadata.
-* Run `uv sync` after changing project metadata or the lockfile.
+* Run `uv sync --locked --all-packages --all-extras --dev` after changing project metadata or the lockfile.
 * Keep `uv.lock` committed and up to date.
 * Run `uv run --all-packages ruff check .`, `uv run --all-packages ruff format --check .`, `uv run --all-packages mypy .`, `uv run --all-packages pyright`, and `uv run --all-packages pytest` before submitting changes.
 * Prefer `uv run --package <member> ...` when checking one workspace member.

@@ -101,7 +101,7 @@ warn_unused_configs = true
 testpaths = ["apps", "libs"]
 python_files = ["test_*.py", "*_test.py"]
 python_functions = ["test_*"]
-addopts = "-ra -q --cov=apps --cov=libs --cov-report=term-missing --cov-report=xml --cov-report=html"
+addopts = "-ra -q"
 
 [tool.coverage.run]
 branch = true

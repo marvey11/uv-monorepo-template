@@ -83,6 +83,7 @@ uv run --all-packages ruff format .
 
 # Type-check
 uv run --all-packages mypy .
+uv run --all-packages pyright
 ```
 
 To run a command for one member, use `uv run --package <member> <command>`, for example `uv run --package runner pytest`.
@@ -102,6 +103,7 @@ Install the hooks once, then run them against all files:
 
 ```bash
 uv run pre-commit install
+uv run pre-commit install --hook-type pre-push
 uv run pre-commit run --all-files
 ```
 

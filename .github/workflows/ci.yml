@@ -40,6 +40,9 @@ jobs:
       - name: MyPy Type-checking
         run: uv run --all-packages mypy .
 
+      - name: Pyright Type-checking
+        run: uv run --all-packages pyright
+
       - name: Run Test Suite
         run: uv run --all-packages pytest
 

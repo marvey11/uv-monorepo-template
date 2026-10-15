@@ -8,18 +8,18 @@ The root project is tooling-only. Do not add application code or make the root p
 
 ## Development workflow
 
-- Use Python 3.14 or newer, as specified by `.python-version` and the project metadata.
-- Run `uv sync` after changing project metadata or the lockfile.
-- Keep `uv.lock` committed and up to date.
-- Run `uv run --all-packages ruff check .`, `uv run --all-packages ruff format --check .`, `uv run --all-packages mypy .`, and `uv run --all-packages pytest` before submitting changes.
-- Prefer `uv run --package <member> ...` when checking one workspace member.
-- Format with Ruff and keep imports absolute.
+* Use Python 3.14 or newer, as specified by `.python*version` and the project metadata.
+* Run `uv sync` after changing project metadata or the lockfile.
+* Keep `uv.lock` committed and up to date.
+* Run `uv run --all-packages ruff check .`, `uv run --all-packages ruff format --check .`, `uv run --all-packages mypy .`, `uv run --all-packages pyright`, and `uv run --all-packages pytest` before submitting changes.
+* Prefer `uv run --package <member> ...` when checking one workspace member.
+* Format with Ruff and keep imports absolute.
 
 ## Workspace dependencies
 
-- Add internal dependencies to the consuming member's `[project] dependencies`.
-- Add the matching `[tool.uv.sources]` entry with `workspace = true`.
-- Add third-party dependencies with uv rather than editing `uv.lock` by hand.
+* Add internal dependencies to the consuming member's `[project] dependencies`.
+* Add the matching `[tool.uv.sources]` entry with `workspace = true`.
+* Add third-party dependencies with uv rather than editing `uv.lock` by hand.
 
 ## Testing
 

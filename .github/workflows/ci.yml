@@ -43,8 +43,8 @@ jobs:
       - name: Pyright Type-checking
         run: uv run --all-packages pyright
 
-      - name: Run Test Suite
-        run: uv run --all-packages pytest
+      - name: Run Test Suite with coverage
+        run: ./scripts/run-coverage.sh
 
   docker-build-and-push:
     runs-on: ubuntu-latest
